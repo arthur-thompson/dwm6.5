@@ -1,0 +1,6 @@
+#!/bin/sh
+
+~/.fehbg &
+slstatus &
+sxhkd -c ~/.config/sxhkd/sxhkdrcdeb &
+exec dwm
