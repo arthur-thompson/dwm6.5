@@ -65,11 +65,10 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function         format              argument */
-	{ ram_used,         "RAM %s -",        NULL },
-	{ cpu_perc,         " CPU %s%% -",      NULL },
-	{ temp,   	    " TEMP %sC -",	"/sys/class/thermal/thermal_zone2/temp" },
+	{ ram_used,         "RAM %s ",        NULL },
+	{ cpu_perc,         " CPU %s%% ",      NULL },
+	{ temp,   	    " TEMP %s°C ",	"/sys/class/thermal/thermal_zone2/temp" },
 /*	{ battery_perc,     " BAT0 %s%%",      "BAT0" }, */
-/*      { battery_perc,     " BAT1 %s%% -",      "BAT1" }, */
-	{ run_command,	    " VOL %s%% -",      "/bin/sh -c \"amixer get Master | tail -n1 | grep -Po '\\[\\K[^%]*' | head -n1\"" },	
+	{ run_command,	    " VOL %s%% ",      "/bin/sh -c \"amixer get Master | tail -n1 | grep -Po '\\[\\K[^%]*' | head -n1\"" },	
 	{ datetime,         " %s",             "%a %d %b %I:%M %p" },
 };
